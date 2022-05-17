@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go Snippet</title>
+    <link rel="stylesheet" href="lib/codemirror.css">
+    <link rel="stylesheet" href="lib/style.css">
+    <link rel="stylesheet" href="lib/material.css">
+    <script src="lib/codemirror.js"></script>
+    <script src="lib/go.js"></script>
+</head>
+
+<body>
+<div class="hidden">
+package main
+
+import (
+	"github.com/gin-gonic/gin"
+)
+
+func main() {
+
+}
+</div>
+<script defer>
+    var editor = CodeMirror(document.body, {
+        lineNumbers: true,
+        theme:"material",
+        mode:"text/x-go",
+        readOnly:true,
+        value: document.querySelector('.hidden').innerHTML
+    });
+</script>
+</body>
+
+</html>
